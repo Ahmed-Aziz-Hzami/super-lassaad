@@ -3,6 +3,8 @@ module.exports = {
     browser: true,
     es2021: true,
   },
+  parser: "@typescript-eslint/parser",
+  plugins: ["@typescript-eslint"],
   overrides: [
     {
       env: {
@@ -11,6 +13,13 @@ module.exports = {
       files: [".eslintrc.{js,cjs}"],
       parserOptions: {
         sourceType: "script",
+      },
+    },
+    {
+      files: ["*.ts"],
+      extends: ["plugin:@typescript-eslint/recommended"],
+      rules: {
+        "@typescript-eslint/no-unused-vars": ["error"],
       },
     },
   ],
