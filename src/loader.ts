@@ -1,20 +1,22 @@
+const BASE_PATH = import.meta.env.BASE_URL
+
 export const load = {
   fonts: (): void => {
-    loadFont("Round", "/fonts/Round9x13.ttf")
+    loadFont("Round", `${BASE_PATH}fonts/Round9x13.ttf`)
   },
   assets: (): void => {
     // controls prompts
-    loadSprite("up", "/images/Arrow_Up_Key_Dark.png")
-    loadSprite("down", "/images/Arrow_Down_Key_Dark.png")
-    loadSprite("left", "/images/Arrow_Left_Key_Dark.png")
-    loadSprite("right", "/images/Arrow_Right_Key_Dark.png")
-    loadSprite("space", "/images/Space_Key_Dark.png")
+    loadSprite("up", `${BASE_PATH}images/Arrow_Up_Key_Dark.png`)
+    loadSprite("down", `${BASE_PATH}images/Arrow_Down_Key_Dark.png`)
+    loadSprite("left", `${BASE_PATH}images/Arrow_Left_Key_Dark.png`)
+    loadSprite("right", `${BASE_PATH}images/Arrow_Right_Key_Dark.png`)
+    loadSprite("space", `${BASE_PATH}images/Space_Key_Dark.png`)
 
-    loadSprite("coin-icon", "/images/Coins_Ui.png")
-    loadSprite("star-icon", "/images/Stars_Ui.png")
-    loadSprite("coin", "/images/Coin.png")
-    loadSprite("logo", "/images/Logo.png")
-    loadSprite("player", "/images/Player.png", {
+    loadSprite("coin-icon", `${BASE_PATH}images/Coins_Ui.png`)
+    loadSprite("star-icon", `${BASE_PATH}images/Stars_Ui.png`)
+    loadSprite("coin", `${BASE_PATH}images/Coin.png`)
+    loadSprite("logo", `${BASE_PATH}images/Logo.png`)
+    loadSprite("player", `${BASE_PATH}images/Player.png`, {
       sliceX: 4,
       sliceY: 4,
       anims: {
@@ -28,8 +30,8 @@ export const load = {
         "jump-down": 8,
       },
     })
-    loadSprite("bridge", "/images/Bridge.png")
-    loadSprite("spider-1", "/images/Spider_1.png", {
+    loadSprite("bridge", `${BASE_PATH}images/Bridge.png`)
+    loadSprite("spider-1", `${BASE_PATH}images/Spider_1.png`, {
       sliceX: 3,
       sliceY: 1,
       anims: {
@@ -37,7 +39,7 @@ export const load = {
         idle: 0,
       },
     })
-    loadSprite("spider-2", "/images/Spider_2.png", {
+    loadSprite("spider-2", `${BASE_PATH}images/Spider_2.png`, {
       sliceX: 3,
       sliceY: 1,
       anims: {
@@ -45,8 +47,11 @@ export const load = {
         idle: 0,
       },
     })
-    loadSprite("forest-background", "/images/Forest_Background_0.png")
-    loadSprite("grass-tileset", "/images/Grass_Tileset.png", {
+    loadSprite(
+      "forest-background",
+      `${BASE_PATH}images/Forest_Background_0.png`
+    )
+    loadSprite("grass-tileset", `${BASE_PATH}images/Grass_Tileset.png`, {
       sliceX: 3,
       sliceY: 4,
       anims: {
@@ -61,7 +66,7 @@ export const load = {
         "mr-2": 8,
       },
     })
-    loadSprite("grass-oneway-tileset", "/images/Grass_Oneway.png", {
+    loadSprite("grass-oneway-tileset", `${BASE_PATH}images/Grass_Oneway.png`, {
       sliceX: 3,
       sliceY: 4,
       anims: {
@@ -76,7 +81,7 @@ export const load = {
         "mr-2": 8,
       },
     })
-    loadSprite("water", "/images/Water.png", {
+    loadSprite("water", `${BASE_PATH}images/Water.png`, {
       sliceX: 8,
       sliceY: 1,
       anims: {
@@ -94,22 +99,25 @@ export const load = {
         },
       },
     })
-    loadSprite("fish-1", "/images/Fish_1.png", {
+    loadSprite("fish-1", `${BASE_PATH}images/Fish_1.png`, {
       sliceX: 2,
       sliceY: 1,
       anims: {
         swim: { from: 0, to: 1, loop: true },
       },
     })
-    loadSprite("fish-2", "/images/Fish_2.png", {
+    loadSprite("fish-2", `${BASE_PATH}images/Fish_2.png`, {
       sliceX: 2,
       sliceY: 1,
       anims: {
         swim: { from: 0, to: 1, loop: true },
       },
     })
-    loadSprite("castle-background", "/images/Castle_Background_0.png")
-    loadSprite("brick-tileset", "/images/Brick_Tileset.png", {
+    loadSprite(
+      "castle-background",
+      `${BASE_PATH}images/Castle_Background_0.png`
+    )
+    loadSprite("brick-tileset", `${BASE_PATH}images/Brick_Tileset.png`, {
       sliceX: 3,
       sliceY: 4,
       anims: {
@@ -124,7 +132,7 @@ export const load = {
         "mr-2": 8,
       },
     })
-    loadSprite("brick-oneway-tileset", "/images/Brick_Oneway.png", {
+    loadSprite("brick-oneway-tileset", `${BASE_PATH}images/Brick_Oneway.png`, {
       sliceX: 3,
       sliceY: 4,
       anims: {
@@ -140,7 +148,7 @@ export const load = {
       },
     })
 
-    loadSprite("lava", "/images/Lava.png", {
+    loadSprite("lava", `${BASE_PATH}images/Lava.png`, {
       sliceX: 8,
       sliceY: 1,
       anims: {
@@ -158,28 +166,28 @@ export const load = {
         },
       },
     })
-    loadSprite("flame-1", "/images/Flame_1.png", {
+    loadSprite("flame-1", `${BASE_PATH}images/Flame_1.png`, {
       sliceX: 2,
       sliceY: 1,
       anims: {
         burn: { from: 0, to: 1, loop: true },
       },
     })
-    loadSprite("flame-2", "/images/Flame_2.png", {
+    loadSprite("flame-2", `${BASE_PATH}images/Flame_2.png`, {
       sliceX: 2,
       sliceY: 1,
       anims: {
         burn: { from: 0, to: 1, loop: true },
       },
     })
-    loadSprite("axe", "/images/Axe_Trap.png")
-    loadSprite("saw", "/images/Circular_Saw.png")
+    loadSprite("axe", `${BASE_PATH}images/Axe_Trap.png`)
+    loadSprite("saw", `${BASE_PATH}images/Circular_Saw.png`)
 
-    loadSprite("sky-background-0", "/images/Sky_Background_0.png")
-    loadSprite("sky-background-1", "/images/Sky_Background_1.png")
-    loadSprite("sky-background-2", "/images/Sky_Background_2.png")
+    loadSprite("sky-background-0", `${BASE_PATH}images/Sky_Background_0.png`)
+    loadSprite("sky-background-1", `${BASE_PATH}images/Sky_Background_1.png`)
+    loadSprite("sky-background-2", `${BASE_PATH}images/Sky_Background_2.png`)
 
-    loadSprite("rock-tileset", "/images/Grass_Rock_Tileset.png", {
+    loadSprite("rock-tileset", `${BASE_PATH}images/Grass_Rock_Tileset.png`, {
       sliceX: 3,
       sliceY: 4,
       anims: {
@@ -194,22 +202,26 @@ export const load = {
         "mr-2": 8,
       },
     })
-    loadSprite("rock-oneway-tileset", "/images/Grass_Rock_Oneway.png", {
-      sliceX: 3,
-      sliceY: 4,
-      anims: {
-        tl: 0,
-        tm: 1,
-        tr: 2,
-        ml: 3,
-        mm: 4,
-        mr: 5,
-        "ml-2": 6,
-        "mm-2": 7,
-        "mr-2": 8,
-      },
-    })
-    loadSprite("clouds", "/images/Clouds.png", {
+    loadSprite(
+      "rock-oneway-tileset",
+      `${BASE_PATH}images/Grass_Rock_Oneway.png`,
+      {
+        sliceX: 3,
+        sliceY: 4,
+        anims: {
+          tl: 0,
+          tm: 1,
+          tr: 2,
+          ml: 3,
+          mm: 4,
+          mr: 5,
+          "ml-2": 6,
+          "mm-2": 7,
+          "mr-2": 8,
+        },
+      }
+    )
+    loadSprite("clouds", `${BASE_PATH}images/Clouds.png`, {
       sliceX: 8,
       sliceY: 1,
       anims: {
@@ -227,7 +239,7 @@ export const load = {
         },
       },
     })
-    loadSprite("bird-1", "/images/Bird_1.png", {
+    loadSprite("bird-1", `${BASE_PATH}images/Bird_1.png`, {
       sliceX: 3,
       sliceY: 1,
       anims: {
@@ -239,7 +251,7 @@ export const load = {
         },
       },
     })
-    loadSprite("bird-2", "/images/Bird_2.png", {
+    loadSprite("bird-2", `${BASE_PATH}images/Bird_2.png`, {
       sliceX: 3,
       sliceY: 1,
       anims: {
@@ -253,17 +265,17 @@ export const load = {
     })
   },
   sounds: (): void => {
-    loadSound("jump", "/sounds/jump.wav")
-    loadSound("coin", "/sounds/coin.wav")
-    loadSound("water-ambience", "/sounds/water-ambience.mp3")
-    loadSound("spider-attack", "/sounds/spider-attack.mp3")
-    loadSound("hit", "/sounds/hit.wav")
-    loadSound("lava-ambience", "/sounds/lava.wav")
-    loadSound("confirm-ui", "/sounds/confirm-ui.wav")
-    loadSound("swinging-axe", "/sounds/swinging-axe.mp3")
-    loadSound("saw", "/sounds/saw.wav")
-    loadSound("fireball", "/sounds/fireball.wav")
-    loadSound("strong-wind", "/sounds/strong-wind.wav")
-    loadSound("dive", "/sounds/dive.wav")
+    loadSound("jump", `${BASE_PATH}sounds/jump.wav`)
+    loadSound("coin", `${BASE_PATH}sounds/coin.wav`)
+    loadSound("water-ambience", `${BASE_PATH}sounds/water-ambience.mp3`)
+    loadSound("spider-attack", `${BASE_PATH}sounds/spider-attack.mp3`)
+    loadSound("hit", `${BASE_PATH}sounds/hit.wav`)
+    loadSound("lava-ambience", `${BASE_PATH}sounds/lava.wav`)
+    loadSound("confirm-ui", `${BASE_PATH}sounds/confirm-ui.wav`)
+    loadSound("swinging-axe", `${BASE_PATH}sounds/swinging-axe.mp3`)
+    loadSound("saw", `${BASE_PATH}sounds/saw.wav`)
+    loadSound("fireball", `${BASE_PATH}sounds/fireball.wav`)
+    loadSound("strong-wind", `${BASE_PATH}sounds/strong-wind.wav`)
+    loadSound("dive", `${BASE_PATH}sounds/dive.wav`)
   },
 }
