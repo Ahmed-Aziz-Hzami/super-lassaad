@@ -34,7 +34,7 @@ const main = () => {
     scene(key, scenes[key])
   }
 
-  go("end")
+  go("menu")
 }
 
 main()

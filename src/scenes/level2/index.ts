@@ -31,7 +31,7 @@ export function scene() {
   )
   player.enablePassthrough()
   player.enableCoinPickUp()
-  // player.enableMobVunerability()
+  player.enableMobVunerability()
 
   const flames = new Flames(
     config.flamePositions.map((flamePos) => flamePos()),

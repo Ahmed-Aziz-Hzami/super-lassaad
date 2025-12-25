@@ -31,7 +31,7 @@ export function scene() {
   )
   player.enablePassthrough()
   player.enableCoinPickUp()
-  // player.enableMobVunerability()
+  player.enableMobVunerability()
 
   const fish = new Fish(
     config.fishPositions.map((fishPos) => fishPos()),
