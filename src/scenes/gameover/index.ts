@@ -5,13 +5,22 @@ export function scene() {
   soundManager.pauseAllSounds()
   add([rect(width(), height()), color(0, 0, 0)])
   add([
-    text("Mafamech Salaire ! Nchalah Lmara Ejeya ", {
-      size: 50,
+    text("Mafamech Salaire!", {
+      size: 40,
       font: "Round",
     }),
     area(),
     anchor("center"),
     pos(center()),
+  ])
+  add([
+    text("Nchalah Lmara Ejeya", {
+      size: 30,
+      font: "Round",
+    }),
+    area(),
+    anchor("center"),
+    pos(vec2(center().x, center().y + 50)),
   ])
 
   displayBlinkingUIMessage(

@@ -8,7 +8,7 @@ export function scene() {
     area(),
     anchor("center"),
     pos(center().x, center().y - 100),
-    scale(3 / 5),
+    scale(2 / 5),
   ])
 
   displayBlinkingUIMessage(
