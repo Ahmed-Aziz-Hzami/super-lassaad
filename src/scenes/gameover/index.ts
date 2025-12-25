@@ -3,7 +3,7 @@ import { displayBlinkingUIMessage } from "../../utils/ui"
 
 export function scene() {
   soundManager.pauseAllSounds()
-  add([rect(1280, 720), color(0, 0, 0)])
+  add([rect(width(), height()), color(0, 0, 0)])
   add([
     text("Mafamech Salaire ! Nchalah Lmara Ejeya ", {
       size: 50,

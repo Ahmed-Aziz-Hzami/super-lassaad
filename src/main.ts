@@ -8,29 +8,33 @@ import { scene as level3Scene } from "./scenes/level3"
 import { scene as gameoverScene } from "./scenes/gameover"
 import { scene as endScene } from "./scenes/end"
 
-kaboom({
-  width: 1280,
-  height: 720,
-  letterbox: true,
-  debug: true,
-})
+const main = () => {
+  kaboom({
+    width: window.innerWidth,
+    height: window.innerHeight,
+    letterbox: true,
+    debug: true,
+  })
 
-load.fonts()
-load.assets()
-load.sounds()
+  load.fonts()
+  load.assets()
+  load.sounds()
 
-const scenes = {
-  menu: menuScene,
-  controls: controlsScene,
-  1: level1Scene,
-  2: level2Scene,
-  3: level3Scene,
-  gameover: gameoverScene,
-  end: endScene,
+  const scenes = {
+    menu: menuScene,
+    controls: controlsScene,
+    1: level1Scene,
+    2: level2Scene,
+    3: level3Scene,
+    gameover: gameoverScene,
+    end: endScene,
+  }
+
+  for (const key in scenes) {
+    scene(key, scenes[key])
+  }
+
+  go("menu")
 }
 
-for (const key in scenes) {
-  scene(key, scenes[key])
-}
-
-go("menu")
+main()

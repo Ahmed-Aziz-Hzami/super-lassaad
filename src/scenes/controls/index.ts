@@ -1,7 +1,7 @@
 import { displayBlinkingUIMessage } from "../../utils/ui"
 
 export function scene() {
-  add([sprite("forest-background"), scale(4)])
+  add([sprite("forest-background"), scale(width() / 320, height() / 180)])
   add([
     text("Controls", { font: "Round", size: 50 }),
     area(),

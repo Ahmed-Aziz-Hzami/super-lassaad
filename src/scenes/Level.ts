@@ -5,10 +5,17 @@ export class Level {
   map: GameObj[] = []
 
   drawWaves(type: string, anim: string) {
+    const tileWidth = 64
+    const numTiles = Math.ceil(width() / tileWidth) + 2
     let offset = -100
-    for (let i = 0; i < 21; i++) {
-      add([sprite(type, { anim }), pos(offset, 600), scale(4), fixed()])
-      offset += 64
+    for (let i = 0; i < numTiles; i++) {
+      add([
+        sprite(type, { anim }),
+        pos(offset, height() - 120),
+        scale(4),
+        fixed(),
+      ])
+      offset += tileWidth
     }
   }
 
@@ -30,6 +37,6 @@ export class Level {
   }
 
   drawBackground(bgSpriteName: string) {
-    add([sprite(bgSpriteName), fixed(), scale(4)])
+    add([sprite(bgSpriteName), fixed(), scale(width() / 320, height() / 180)])
   }
 }

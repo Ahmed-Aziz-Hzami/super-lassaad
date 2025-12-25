@@ -30,7 +30,7 @@ export function scene() {
   )
   player.enablePassthrough()
   player.enableCoinPickUp()
-  player.enableMobVunerability()
+  // player.enableMobVunerability()
 
   level.drawWaves("clouds", "wave")
 
